@@ -1,4 +1,5 @@
-package com.github.fluffynuts.ch4tz;
+package ix.notifications.android;
+
 import android.app.Application;
 import android.test.ApplicationTestCase;
 

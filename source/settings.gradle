@@ -1,2 +1,1 @@
-include ':app', ':ix.notifications.android'
-include ':ix.notifications'
+include ':app'

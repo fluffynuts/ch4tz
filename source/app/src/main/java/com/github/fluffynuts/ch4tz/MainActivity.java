@@ -45,17 +45,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setListViewAdapter();
 
-        bindFabToShowArbNotification();
         listenForMessages();
-        register();
         bindFabToSendMessage();
-    }
-
-    private void register() {
-        // TODO
-        _registration = new ClientRegistration();
-        _registration.Name = "Mobile";
-        _registration.Identifier = UUID.randomUUID();
     }
 
     private void setListViewAdapter() {
@@ -143,20 +134,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendMessage();
-            }
-        });
-    }
-    private void bindFabToShowArbNotification() {
-
-        final String textContent = "Bacon ipsum dolor amet shoulder pancetta biltong pork ham corned beef kielbasa ground round andouille turducken meatloaf pig jerky prosciutto. Cupim pork chop andouille, biltong spare ribs filet mignon tail. Pastrami ground round andouille picanha, pork spare ribs chuck hamburger. Ribeye tenderloin shank beef. Swine venison meatball t-bone landjaeger alcatra pork tail pork chop turkey hamburger sirloin chuck.";
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
-                //sendMessage();
-                showNotification("Meep!", "Meep, meep-meep!", textContent);
             }
         });
     }
